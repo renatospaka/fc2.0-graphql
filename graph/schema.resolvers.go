@@ -11,12 +11,28 @@ import (
 	"github.com/renatospaka/fc2.0-graphql/graph/model"
 )
 
-func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) (*model.Todo, error) {
+func (r *mutationResolver) CreateCategory(ctx context.Context, input model.NewCategory) (*model.Category, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 
-func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
+func (r *mutationResolver) CreateCourse(ctx context.Context, input model.NewCourse) (*model.Course, error) {
 	panic(fmt.Errorf("not implemented"))
+}
+
+func (r *mutationResolver) CreateChapter(ctx context.Context, input model.NewChapter) (*model.Chapter, error) {
+	panic(fmt.Errorf("not implemented"))
+}
+
+func (r *queryResolver) Categories(ctx context.Context) ([]*model.Category, error) {
+	return r.Resolver.Categories, nil
+}
+
+func (r *queryResolver) Courses(ctx context.Context) ([]*model.Course, error) {
+	return r.Resolver.Courses, nil
+}
+
+func (r *queryResolver) Chapters(ctx context.Context) ([]*model.Chapter, error) {
+	return r.Resolver.Chapters, nil
 }
 
 // Mutation returns generated.MutationResolver implementation.
