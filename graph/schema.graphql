@@ -1,14 +1,14 @@
 type Category {
   id: ID!
   name: String!
-  description: string!
+  description: String!
   courses: [Course!]!
 }
 
 type Course {
   id: ID!
   name: String! 
-  description: string!
+  description: String!
   category: Category!
   chapters: [Chapter!]!
 }
@@ -22,12 +22,12 @@ type Chapter {
 
 input NewCatergory {
   name: String! 
-  description: string!
+  description: String!
 }
 
 input NewCourse {
   name: String! 
-  description: string!
+  description: String!
   categoryId: Category!
 }
 
