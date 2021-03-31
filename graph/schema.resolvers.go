@@ -5,7 +5,7 @@ package graph
 
 import (
 	"context"
-	"crypto/rand"
+	"math/rand"
 	"fmt"
 
 	"github.com/renatospaka/fc2.0-graphql/graph/generated"
